@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "create a portfolio with html, scss, js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderHTMLcss/portfolio.git"
+  },
+  "keywords": [],
+  "author": "Viacheslav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coderHTMLcss/portfolio/issues"
+  },
+  "homepage": "https://github.com/coderHTMLcss/portfolio#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.1",
+    "parcel": "^2.9.1"
+  }
+}

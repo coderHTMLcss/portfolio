@@ -1,0 +1,9 @@
+.parcel-cache/**/*
+dist/**/*
+.vscode/**/*
+
+node_modules/**/*
+.DS_store/**/*
+
+*.xml
+*.iml
