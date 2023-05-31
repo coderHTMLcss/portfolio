@@ -1,0 +1,104 @@
+.nav {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  @include flex(space-between, center);
+}
+
+.logo svg {
+  width: 96px;
+  height: 38px;
+  @media screen and (min-width: $tablet) {
+    width: 174px;
+    height: 69px;
+  }
+}
+
+.search {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.menu {
+  &-wrapper {
+    position: relative;
+  }
+  &__name {
+    display: none;
+    @media screen and (min-width: $tablet) {
+      font-family: "Ubuntu", sans-serif;
+      @include text(1.5em, 28px, 300, $black);
+      display: block;
+      position: absolute;
+      right: 41.5px;
+      top: -2px;
+    }
+  }
+}
+
+.burger {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+
+  @include flex(flex-start, flex-end, column);
+  row-gap: 5px;
+
+  &__line {
+    height: 2px;
+    background-color: $black;
+  }
+
+  &__line:nth-child(1) {
+    width: 90%;
+  }
+
+  &__line:nth-child(2) {
+    width: 70%;
+  }
+
+  &__line:nth-child(3) {
+    width: 50%;
+  }
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: -16px;
+
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 15px;
+  padding: 15px;
+  background-color: $black;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  &__link {
+    @include text(1.125em, 20px, 400, $white);
+    transition: all 0.7s;
+
+    &:focus {
+      border-bottom: none;
+      outline: 2px solid $grey;
+    }
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
+
+    &:active {
+      background-color: $grey;
+    }
+  }
+}
+
+.menu.active {
+  display: flex;
+}

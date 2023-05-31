@@ -1,0 +1,129 @@
+.hero {
+  &-wrapper {
+    padding-top: 38px;
+    padding-bottom: 100px;
+    // @include flex(flex-start, flex-start, column);
+
+    @media screen and (min-width: $tablet) {
+      padding-top: 67px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 84.5px;
+      padding-bottom: 117.5px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 88px;
+    }
+  }
+
+  &__content {
+    @media screen and (min-width: $desktop) and (max-width: $desktop-bigger) {
+      width: 598px;
+    }
+
+    @media screen and (min-width: $desktop-bigger) {
+      max-width: 770px;
+    }
+  }
+
+  &__greetings {
+    display: block;
+    @include flex(flex-start, center);
+    column-gap: 12px;
+    margin-bottom: 20px;
+
+    &-text {
+      display: block;
+      font-family: "Ubuntu", sans-serif;
+      @include text(1.5em, 28px, 700, $black);
+
+      @media screen and (min-width: $tablet) {
+        @include text(2.125em, 39px);
+      }
+    }
+  }
+
+  &__title {
+    @include text(2em, 38px, 500, $black);
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $tablet) {
+      @include text(4.625em, 88px, 500);
+    }
+  }
+
+  &__title span {
+    @include text(1em, 38px, 400, $black);
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $tablet) {
+      @include text(1em, 88px, 400);
+    }
+  }
+
+  &__title-span {
+    display: block;
+    @include text(1.125em, 21px, 400, $black);
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $tablet) {
+      @include text(2.5em, 47px);
+    }
+  }
+
+  &__text {
+    @include text(1.125em, 21px, 400, $black);
+    margin-bottom: 56px;
+
+    @media screen and (min-width: $tablet) {
+      @include text(1.5em, 28px);
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__picture {
+    display: block;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $tablet) {
+      margin: 0 auto 100px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 434px;
+      height: 459px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    min-height: 280px;
+    object-fit: cover;
+
+    @media screen and (min-width: $desktop) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.scrool-wrapper {
+  @include flex(center);
+
+  @media screen and (min-width: $desktop) {
+    @include flex(flex-start, center);
+  }
+}
+
+.arrow-down {
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+    margin-left: auto;
+  }
+}

@@ -3,14 +3,5 @@
 @import "common.scss";
 @import "variables.scss";
 
-body {
-  font-family: "Rubik", sans-serif;
-}
-
-.text {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 29px;
-  line-height: 36px;
-  font-weight: 500;
-  color: $grey;
-}
+@import "section/header.scss";
+@import "section/hero.scss";
