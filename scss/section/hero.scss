@@ -9,21 +9,20 @@
     }
 
     @media screen and (min-width: $desktop) {
-      padding-top: 84.5px;
-      padding-bottom: 117.5px;
+      padding-top: 67px;
+      padding-bottom: 145px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      column-gap: 88px;
     }
   }
 
   &__content {
-    @media screen and (min-width: $desktop) and (max-width: $desktop-bigger) {
+    @media screen and (min-width: $desktop) {
       width: 598px;
     }
 
     @media screen and (min-width: $desktop-bigger) {
-      max-width: 770px;
+      width: 899px;
     }
   }
 
@@ -89,13 +88,18 @@
     display: block;
     margin-bottom: 60px;
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
       margin: 0 auto 100px;
     }
 
     @media screen and (min-width: $desktop) {
-      width: 434px;
-      height: 459px;
+      margin-left: auto;
+      margin-bottom: 113px;
+    }
+
+    @media screen and (min-width: $desktop-bigger) {
+      height: 640px;
+      margin-bottom: 56px;
     }
   }
 
@@ -111,11 +115,20 @@
   }
 }
 
-.scrool-wrapper {
+.botttom-panel {
   @include flex(center);
 
   @media screen and (min-width: $desktop) {
     @include flex(flex-start, center);
+    column-gap: 347px;
+  }
+
+  @media screen and (min-width: $desktop-bigger) {
+    column-gap: 491px;
+  }
+
+  @media screen and (min-width: $desktop-biggest) {
+    column-gap: 563px;
   }
 }
 
@@ -124,6 +137,21 @@
 
   @media screen and (min-width: $desktop) {
     display: block;
-    margin-left: auto;
+    position: relative;
+
+    @include text(1.125em, 21px, 300, $black);
+    text-transform: uppercase;
+
+    &::after {
+      content: url("/img/icon/arrow__down.svg");
+      position: absolute;
+
+      width: 16px;
+      height: 32px;
+
+      top: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }

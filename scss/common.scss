@@ -16,6 +16,14 @@ body {
   max-width: 1520px;
   margin: 0 auto;
   padding-inline: 1em;
+
+  @media screen and (min-width: $tablet) {
+    padding-inline: 1.25em;
+  }
+
+  @media screen and (min-width: $desktop) and (max-width: $desktop-bigger) {
+    padding-inline: 2em;
+  }
 }
 
 .social {

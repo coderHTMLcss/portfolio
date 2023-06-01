@@ -1,0 +1,40 @@
+.about {
+  &-wrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @media screen and (min-width: $tablet) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+  }
+
+  &__title {
+    @include text(2em, 38px, 400, $black);
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $tablet) {
+      @include text(2.25em, 43px);
+      text-align: center;
+    }
+  }
+}
+
+.reviews-link {
+  display: block;
+
+  & img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+    @media screen and (min-width: $tablet) {
+      height: 715px;
+    }
+  }
+}
