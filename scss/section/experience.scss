@@ -1,0 +1,83 @@
+.experience {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  & .section-title {
+    margin-bottom: 60px;
+  }
+
+  &-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    @include flex(flex-start, stretch, column);
+    column-gap: 32px;
+
+    @media screen and (min-width: $desktop) {
+      @include flex(space-between, row);
+    }
+  }
+
+  &-card {
+    background-color: $grey;
+    padding: 67.5px 20px;
+
+    @media screen and (min-width: $tablet) {
+      padding: 116px 40px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 341px;
+      padding: 67.5px 40px;
+    }
+
+    @media screen and (min-width: $desktop-bigger) {
+      width: 380px;
+      padding: 78px 40px;
+    }
+
+    &__title {
+      @include text(2.875em, 55px, 400, $black);
+      align-self: stretch;
+      margin-bottom: 20px;
+    }
+
+    &__subtitle {
+      @include text(1.125em, 21px, 400, $black);
+      margin-bottom: 60px;
+    }
+  }
+
+  &-card:nth-child(1) {
+    background-color: $black;
+
+    h2,
+    p {
+      color: $white;
+    }
+  }
+
+  &-card:nth-child(3) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media screen and (min-width: $tablet) {
+      padding: 116px 40px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 40px;
+    }
+
+    @media screen and (min-width: $desktop-bigger) {
+      padding: 78px 40px;
+    }
+  }
+}
+
+.swiper-button {
+  margin-top: 60px;
+  @include flex(flex-end, center);
+  column-gap: 12px;
+}

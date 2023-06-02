@@ -1,0 +1,32 @@
+.section {
+  &-title {
+    @include text(2.5em, 47px, 500, $black);
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      @include text(3.375em, 64px, 500, $black);
+    }
+
+    &--white {
+      @include text(2.5em, 47px, 500, $white);
+    }
+  }
+}
+
+.arrow-link {
+  @include flex(flex-start, center);
+  column-gap: 24px;
+  @include text(1.125em, 21px, 600, $black);
+  transition: color 0.7s;
+
+  &__svg {
+    height: 16px;
+  }
+
+  &--white {
+    color: $white;
+  }
+  &--white svg {
+    fill: $white;
+  }
+}
