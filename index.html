@@ -65,31 +65,23 @@
     </header>
     <main class="main">
         <section class="hero-wrapper container">
-            <div class="hero__content">
+            <div class="hero-content">
+                <h3 class="hero-content__greetings">Hello</h3>
 
-                <figure class="hero__greetings">
-                    <svg width="48" height="2" viewBox="0 0 48 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="48" y1="1" x2="-8.74228e-08" y2="0.999996" stroke="#333333" stroke-width="2" />
-                    </svg>
-                    <p class="hero__greetings-text">Hello</p>
-                </figure>
-
-                <h1 class="hero__title"><span>I’m</span> Sarah Jackson</h1>
-                <span class="hero__title-span">
-                    A UX / UI designer, product designer, content creator and creative
-                    director.
-                </span>
-                <p class="hero__text">
+                <h1 class="hero-content__title"><span>I’m</span> Sarah Jackson</h1>
+                <h2 class="hero-content__subtitle">
+                    A UX / UI designer, product designer, content creator and creative director.
+                </h2>
+                <p class="hero-content__text">
                     Of course, there’s so much more to me than just a few fancy titles. Scroll down and get to know me,
                 </p>
             </div>
 
-            <picture class="hero__picture">
-                <source srcset="./img/person--desc.png" media="(min-width:1152px)">
-                <img class="hero__img" src="./img/person--mob.png" alt="peson foto mobile">
-            </picture>
+            <figure class="hero-person">
+                <img class="hero-person__img" src="./img/hero-bg.png" alt="person foto">
+            </figure>
 
-            <div class="botttom-panel">
+            <div class="bottom-panel">
                 <ul class="social">
                     <li class="social__item">
                         <a class="socila__link" href="https://uk-ua.facebook.com/" target="_blank">
@@ -196,12 +188,14 @@
                         </a>
                     </li>
                 </ul>
-                <a class="arrow-down" href="#">Scroll</a>
+
+                <a href="#" class="arrow-scroll">Scroll</a>
             </div>
+        </section>
 
         </section>
 
-        <section class="about-wrapper container">
+        <section class="about-wrapper section-pd container">
             <h3 class="about__title">
                 Learn all about me in 60 seconds.
             </h3>
@@ -212,7 +206,7 @@
 
         </section>
 
-        <section class="experience container">
+        <section class="experience section-pd container">
             <h2 class="section-title">What I Do</h2>
             <div class="experience-swiper">
 
@@ -270,14 +264,171 @@
                             </figure>
                         </a>
                     </div>
+
+
                 </div>
 
+                <div class="control-panel">
+                    <div class="cub"></div>
+                    <div class="dots">
+                        <div class="dots__item active">
+                            <figure class="dots__item-svg">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="6.5" stroke="#333333" stroke-width="7" />
+                                </svg>
+                            </figure>
+                        </div>
+                        <div class="dots__item">
+                            <figure class="dots__item-svg">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="6" cy="6" r="6" fill="#333333" />
+                                </svg>
+                            </figure>
+                        </div>
+                        <div class="dots__item">
+                            <figure class="dots__item-svg">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="6" cy="6" r="6" fill="#333333" />
+                                </svg>
+                            </figure>
+                        </div>
+                    </div>
 
-
-                <div class="swiper-pagination"></div>
+                    <div class="buttons">
+                        <div class="button__next">
+                            <figure class="button-svg">
+                                <svg width="25" height="8" viewBox="0 0 25 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35356L3.82843 7.53554C4.02369 7.7308 4.34027 7.7308 4.53553 7.53554C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976313 4.7308 0.65973 4.53553 0.464468C4.34027 0.269206 4.02369 0.269206 3.82843 0.464468L0.646446 3.64645ZM25 3.5L1 3.5L1 4.5L25 4.5L25 3.5Z"
+                                        fill="#333333" />
+                                </svg>
+                            </figure>
+                        </div>
+                        <div class="button__prev">
+                            <figure class="button-svg">
+                                <svg width="25" height="8" viewBox="0 0 25 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.3536 4.35355C24.5488 4.15829 24.5488 3.84171 24.3536 3.64645L21.1716 0.464466C20.9763 0.269204 20.6597 0.269204 20.4645 0.464466C20.2692 0.659728 20.2692 0.976311 20.4645 1.17157L23.2929 4L20.4645 6.82843C20.2692 7.02369 20.2692 7.34027 20.4645 7.53553C20.6597 7.7308 20.9763 7.7308 21.1716 7.53553L24.3536 4.35355ZM0 4.5H24V3.5H0V4.5Z"
+                                        fill="#333333" />
+                                </svg>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </section>
+
+        <section class="portfolio-wrapper section-pd container">
+            <h2 class="section-title">Portfolio</h2>
+            <ul class="portfolio-filter">
+                <li class="portfolio-filter__item">
+                    <button class="portfolio-filter__btn active" type="button">All</button>
+                </li>
+                <li class="portfolio-filter__item">
+                    <button class="portfolio-filter__btn" type="button">UI & UX</button>
+                </li>
+                <li class="portfolio-filter__item">
+                    <button class="portfolio-filter__btn" type="button">Graphic Design</button>
+                </li>
+                <li class="portfolio-filter__item">
+                    <button class="portfolio-filter__btn" type="button">Web Development</button>
+                </li>
+            </ul>
+
+            <ul class="portfolio-gallary">
+                <li class="portfolio-gallary__item">
+                    <img class="portfolio-gallary__img" src="./img/portfolio/porfolio-1.png" alt="picture 1">
+                </li>
+                <li class="portfolio-gallary__item">
+                    <img class="portfolio-gallary__img" src="./img/portfolio/porfolio-2.png" alt="picture 2">
+                </li>
+                <li class="portfolio-gallary__item">
+                    <img class="portfolio-gallary__img" src="./img/portfolio/porfolio-3.png" alt="picture 3">
+                    <p>
+                        Brochure <br>
+                        Design
+                    </p>
+                    <a href="#" class="arrow-link arrow-link--white">
+                        Look Inside
+                        <figure class="arrow-link__svg">
+                            <svg width="42" height="16" viewBox="0 0 42 16" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M41.7071 8.70711C42.0976 8.31658 42.0976 7.68342 41.7071 7.29289L35.3431 0.928932C34.9526 0.538408 34.3195 0.538408 33.9289 0.928932C33.5384 1.31946 33.5384 1.95262 33.9289 2.34315L39.5858 8L33.9289 13.6569C33.5384 14.0474 33.5384 14.6805 33.9289 15.0711C34.3195 15.4616 34.9526 15.4616 35.3431 15.0711L41.7071 8.70711ZM0 9H41V7H0V9Z" />
+                            </svg>
+                        </figure>
+                    </a>
+                </li>
+                <li class="portfolio-gallary__item">
+                    <img class="portfolio-gallary__img" src="./img/portfolio/porfolio-4.png" alt="picture 4">
+                </li>
+                <li class="portfolio-gallary__item">
+                    <img class="portfolio-gallary__img" src="./img/portfolio/porfolio-5.png" alt="picture 5">
+                </li>
+                <li class="portfolio-gallary__item">
+                    <img class="portfolio-gallary__img" src="./img/portfolio/porfolio-6.png" alt="picture 6">
+                </li>
+            </ul>
+
+            <div class="control-panel">
+                <div class="cub"></div>
+                <div class="dots">
+                    <div class="dots__item active">
+                        <figure class="dots__item-svg">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="6.5" stroke="#333333" stroke-width="7" />
+                            </svg>
+                        </figure>
+                    </div>
+                    <div class="dots__item">
+                        <figure class="dots__item-svg">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="6" cy="6" r="6" fill="#333333" />
+                            </svg>
+                        </figure>
+                    </div>
+                    <div class="dots__item">
+                        <figure class="dots__item-svg">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="6" cy="6" r="6" fill="#333333" />
+                            </svg>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <div class="button__next">
+                        <figure class="button-svg">
+                            <svg width="25" height="8" viewBox="0 0 25 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35356L3.82843 7.53554C4.02369 7.7308 4.34027 7.7308 4.53553 7.53554C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976313 4.7308 0.65973 4.53553 0.464468C4.34027 0.269206 4.02369 0.269206 3.82843 0.464468L0.646446 3.64645ZM25 3.5L1 3.5L1 4.5L25 4.5L25 3.5Z"
+                                    fill="#333333" />
+                            </svg>
+                        </figure>
+                    </div>
+                    <div class="button__prev">
+                        <figure class="button-svg">
+                            <svg width="25" height="8" viewBox="0 0 25 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24.3536 4.35355C24.5488 4.15829 24.5488 3.84171 24.3536 3.64645L21.1716 0.464466C20.9763 0.269204 20.6597 0.269204 20.4645 0.464466C20.2692 0.659728 20.2692 0.976311 20.4645 1.17157L23.2929 4L20.4645 6.82843C20.2692 7.02369 20.2692 7.34027 20.4645 7.53553C20.6597 7.7308 20.9763 7.7308 21.1716 7.53553L24.3536 4.35355ZM0 4.5H24V3.5H0V4.5Z"
+                                    fill="#333333" />
+                            </svg>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
 

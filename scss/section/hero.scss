@@ -2,156 +2,168 @@
   &-wrapper {
     padding-top: 38px;
     padding-bottom: 100px;
-    // @include flex(flex-start, flex-start, column);
 
     @media screen and (min-width: $tablet) {
       padding-top: 67px;
     }
 
     @media screen and (min-width: $desktop) {
-      padding-top: 67px;
       padding-bottom: 145px;
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 84.5px;
+      padding-bottom: 162.5px;
+    }
   }
 
-  &__content {
+  &-content {
     @media screen and (min-width: $desktop) {
       width: 598px;
     }
 
     @media screen and (min-width: $desktop-bigger) {
-      width: 899px;
+      width: 770px;
     }
-  }
-
-  &__greetings {
-    display: block;
-    @include flex(flex-start, center);
-    column-gap: 12px;
-    margin-bottom: 20px;
-
-    &-text {
-      display: block;
-      font-family: "Ubuntu", sans-serif;
+    &__greetings {
+      position: relative;
       @include text(1.5em, 28px, 700, $black);
 
+      @include flex(flex-start, center);
+      column-gap: 12px;
+
+      margin-bottom: 20px;
+
       @media screen and (min-width: $tablet) {
-        @include text(2.125em, 39px);
+        @include text(2.125em, 34px, 700, $black);
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 48px;
+        height: 2px;
+
+        background-color: $black;
+      }
+    }
+
+    &__title {
+      @include text(2em, 38px, 500, $black);
+
+      margin-bottom: 20px;
+
+      @media screen and (min-width: $tablet) {
+        @include text(4.625em, 88px, 500, $black);
+      }
+
+      & span {
+        font-weight: 400;
+      }
+    }
+
+    &__subtitle {
+      @include text(1.125em, 21px, 400, $black);
+
+      margin-bottom: 20px;
+
+      @media screen and (min-width: $tablet) {
+        @include text(2.5em, 47px, 400, $black);
+      }
+    }
+
+    &__text {
+      @include text(1.125em, 21px, 400, $black);
+
+      margin-bottom: 56px;
+
+      @media screen and (min-width: $tablet) {
+        @include text(1.5em, 28px, 400, $black);
+      }
+
+      @media screen and (min-width: $desktop) {
+        margin-bottom: 0px;
       }
     }
   }
 
-  &__title {
-    @include text(2em, 38px, 500, $black);
-    margin-bottom: 20px;
-
-    @media screen and (min-width: $tablet) {
-      @include text(4.625em, 88px, 500);
-    }
-  }
-
-  &__title span {
-    @include text(1em, 38px, 400, $black);
-    margin-bottom: 20px;
-
-    @media screen and (min-width: $tablet) {
-      @include text(1em, 88px, 400);
-    }
-  }
-
-  &__title-span {
+  &-person {
+    height: 280px;
     display: block;
-    @include text(1.125em, 21px, 400, $black);
-    margin-bottom: 20px;
 
     @media screen and (min-width: $tablet) {
-      @include text(2.5em, 47px);
-    }
-  }
-
-  &__text {
-    @include text(1.125em, 21px, 400, $black);
-    margin-bottom: 56px;
-
-    @media screen and (min-width: $tablet) {
-      @include text(1.5em, 28px);
+      width: 100%;
+      height: 459px;
     }
 
     @media screen and (min-width: $desktop) {
-      margin-bottom: 0px;
-    }
-  }
-
-  &__picture {
-    display: block;
-    margin-bottom: 60px;
-
-    @media screen and (min-width: $tablet) and (max-width: $desktop) {
-      margin: 0 auto 100px;
-    }
-
-    @media screen and (min-width: $desktop) {
+      width: 434px;
+      height: 459px;
       margin-left: auto;
-      margin-bottom: 113px;
+      margin-bottom: 0px;
     }
 
     @media screen and (min-width: $desktop-bigger) {
+      width: 550px;
       height: 640px;
-      margin-bottom: 56px;
     }
-  }
 
-  &__img {
-    width: 100%;
-    min-height: 280px;
-    object-fit: cover;
-
-    @media screen and (min-width: $desktop) {
+    &__img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 }
+.bottom {
+  &-panel {
+    @include flex(center, center);
+    margin-top: 60px;
 
-.botttom-panel {
-  @include flex(center);
+    @media screen and (min-width: $tablet) {
+      margin-top: 100px;
+    }
 
-  @media screen and (min-width: $desktop) {
-    @include flex(flex-start, center);
-    column-gap: 347px;
-  }
+    @media screen and (min-width: $desktop) {
+      @include flex(start, center);
+      column-gap: 347px;
+    }
 
-  @media screen and (min-width: $desktop-bigger) {
-    column-gap: 491px;
-  }
+    @media screen and (min-width: $desktop-bigger) {
+      margin-top: 56px;
+      column-gap: 491px;
+    }
 
-  @media screen and (min-width: $desktop-biggest) {
-    column-gap: 563px;
+    @media screen and (min-width: $desktop-biggest) {
+      column-gap: 563px;
+    }
   }
 }
+.social {
+  @include flex(start, center);
+  column-gap: 32px;
+}
 
-.arrow-down {
+.arrow-scroll {
   display: none;
+  position: relative;
+
+  &::before {
+    content: url("/img/icon/arrow__down.svg");
+    position: absolute;
+    display: block;
+    top: 33px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   @media screen and (min-width: $desktop) {
     display: block;
-    position: relative;
-
     @include text(1.125em, 21px, 300, $black);
     text-transform: uppercase;
 
-    &::after {
-      content: url("/img/icon/arrow__down.svg");
-      position: absolute;
-
-      width: 16px;
-      height: 32px;
-
-      top: 32px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+    color: #333333;
   }
 }

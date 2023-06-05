@@ -1,0 +1,117 @@
+.portfolio {
+  &-wrapper {
+    .section-title {
+      margin-bottom: 60px;
+    }
+  }
+
+  &-filter {
+    @include flex(flex-start, flex-start, column);
+    row-gap: 24px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $tablet) {
+      @include flex(center, center);
+      column-gap: 24px;
+    }
+
+    &__item {
+      position: relative;
+      @include flex(flex-start, center);
+      column-gap: 12px;
+
+      @media screen and (min-width: $tablet) {
+        column-gap: 24px;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 2px;
+        background-color: $black;
+      }
+
+      @media screen and (min-width: $tablet) {
+        &:nth-child(1) {
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &__btn {
+      @include text(0.875em, 17px, 400, $black);
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointers;
+    }
+
+    &__btn.active {
+      @include text(0.875em, 17px, 600, $black);
+    }
+  }
+
+  &-gallary {
+    @media screen and (min-width: $desktop) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 32px;
+    }
+
+    &__item {
+      height: 200px;
+
+      @media screen and (min-width: 475px) and (max-width: $desktop) {
+        height: 520px;
+      }
+
+      @media screen and (min-width: $desktop) {
+        &:nth-child(1) {
+          grid-column: 1 / 1;
+          grid-row: 1 / 2;
+        }
+      }
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 32px;
+      @media screen and (min-width: $desktop) {
+        margin-bottom: 0px;
+      }
+    }
+
+    &__item:nth-child(3) {
+      position: relative;
+
+      p {
+        position: absolute;
+        bottom: 111px;
+        left: 20px;
+        @include text(1.5em, 28px, 400, $white);
+      }
+      a {
+        position: absolute;
+        bottom: 40px;
+        right: 20px;
+        @include text(1.125em, 21px, 400, $white);
+      }
+
+      @media screen and (min-width: $tablet) {
+        p,
+        a {
+          display: none;
+        }
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
