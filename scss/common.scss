@@ -39,6 +39,16 @@ body {
     padding-top: 140px;
     padding-bottom: 140px;
   }
+
+  &--mod {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @media screen and (min-width: $tablet) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
 }
 
 .social {
@@ -64,15 +74,39 @@ body {
   height: 20px;
 }
 .dots {
+  cursor: pointer;
   @include flex(flex-start, center);
   column-gap: 32px;
 }
 
 .buttons {
   display: none;
+  cursor: pointer;
 
   @media screen and (min-width: $tablet) {
     @include flex(flex-start, center);
     column-gap: 12px;
+  }
+}
+
+.button {
+  background-color: $white;
+  color: $black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.7s;
+
+  &:hover {
+    scale: 1.2;
+  }
+
+  &:focus {
+    box-shadow: 9px 7px 32px 0px $white;
+  }
+
+  &:active {
+    background-color: $black;
+    color: $white;
   }
 }

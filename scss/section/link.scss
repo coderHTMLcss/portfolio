@@ -1,0 +1,47 @@
+.link {
+  position: relative;
+  overflow: hidden;
+  background-color: $black-bg;
+
+  &-info {
+    text-align: center;
+    @include flex(center, center, column);
+    row-gap: 80px;
+  }
+
+  .subtitle {
+    @include text(2em, 38px, 400, $white);
+    margin-bottom: 24px;
+    z-index: 1;
+  }
+
+  &__btn {
+    padding: 20px 40px;
+    @include text(1.75em, 33px, 400);
+    z-index: 1;
+  }
+
+  &-social {
+    column-gap: 42px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+    path {
+      fill: $white;
+    }
+
+    @media screen and (min-width: $tablet) {
+      column-gap: 100px;
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      column-gap: 140px;
+    }
+  }
+}

@@ -46,7 +46,7 @@
       background-color: transparent;
       border: none;
       outline: none;
-      cursor: pointers;
+      cursor: pointer;
     }
 
     &__btn.active {
@@ -58,7 +58,7 @@
     @media screen and (min-width: $desktop) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+
       grid-gap: 32px;
     }
 
@@ -70,9 +70,10 @@
       }
 
       @media screen and (min-width: $desktop) {
+        height: 100%;
         &:nth-child(1) {
-          grid-column: 1 / 1;
-          grid-row: 1 / 2;
+          grid-column-start: span 1;
+          grid-row-start: span 2;
         }
       }
     }
