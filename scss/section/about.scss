@@ -16,6 +16,11 @@
 .reviews-link {
   display: block;
 
+  @media screen and (min-width: $desktop-bigger) {
+    width: 1262px;
+    margin: 0 auto;
+  }
+
   & img {
     width: 100%;
     height: 200px;
