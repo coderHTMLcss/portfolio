@@ -1,0 +1,89 @@
+.blog {
+  .section-title {
+    margin-bottom: 60px;
+  }
+
+  &-wrapper {
+    @include flex(flex-start, flex-start, column);
+    row-gap: 32px;
+
+    @media screen and (min-width: $desktop) {
+      @include flex(space-between, center, row);
+      column-gap: 32px;
+    }
+
+    @media screen and (min-width: $desktop-biggest) {
+      @include flex(center, center, row);
+      column-gap: 61px;
+    }
+  }
+}
+
+.card {
+  position: relative;
+  width: 100%;
+
+  @media screen and (min-width: $desktop) {
+    max-width: 380px;
+    min-width: 337px;
+  }
+
+  &__picture {
+    display: block;
+    width: 100%;
+    height: 337px;
+  }
+
+  &__span {
+    @include text(0.875em, 17px, 300, $black);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @media screen and (min-width: $tablet) {
+      object-fit: inherit;
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    background-color: $black;
+  }
+
+  &-comments {
+    @include flex(space-between, center, row);
+
+    &__count,
+    &__likes,
+    &__names {
+      @include text(0.875em, 17px, 400, $white);
+    }
+  }
+
+  &__description {
+    @include text(1.25em, 24px, 400, $white);
+
+    @media screen and (min-width: $tablet) {
+      @include text(1.5em, 28px, 400, $white);
+    }
+  }
+
+  .button-link {
+    font-weight: 500;
+    @include flex(space-between, center, row);
+
+    @media screen and (min-width: $tablet) {
+      @include flex(flex-start, center, row);
+      column-gap: 24px;
+    }
+  }
+}
