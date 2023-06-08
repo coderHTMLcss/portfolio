@@ -44,6 +44,7 @@
     &__title {
       @include text(2.875em, 55px, 400, $black);
       align-self: stretch;
+      overflow: hidden;
       margin-bottom: 20px;
     }
 
