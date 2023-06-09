@@ -1,0 +1,134 @@
+.footer {
+  padding-top: 100px;
+  padding-bottom: 32px;
+
+  .section-title--left {
+    margin-bottom: 40px;
+    @media screen and (min-width: $desktop) {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+  }
+
+  &__top {
+    @include flex(flex-start, flex-start, column);
+
+    @media screen and (min-width: $desktop) {
+      @include flex(center, center, row);
+      column-gap: 150px;
+    }
+  }
+
+  &__info {
+    @media screen and (min-width: $desktop-biggest) {
+      width: 607px;
+    }
+  }
+
+  &__description {
+    @include text(1.125em, 23px, 300, $black);
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $tablet) {
+      @include text(1.75em, 36px, 300, $black);
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-top: 60px;
+      margin-bottom: 209px;
+    }
+
+    @media screen and (min-width: $desktop-bigger) {
+      @include text(2.3em, 52px, 300, $black);
+      margin-bottom: 197px;
+    }
+  }
+
+  &__contacts {
+    @include flex(flex-start, flex-start, column);
+    row-gap: 16px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $desktop) {
+      max-width: 308px;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__item {
+    @include flex(flex-start, center, row);
+    column-gap: 20px;
+    @include pseudoElement(static, before, "") {
+      content: "";
+      display: block;
+      min-width: 22px;
+      height: 2px;
+      background-color: $black;
+    }
+  }
+
+  &__link,
+  &__text {
+    @include text(1.125em, 21px, 300, $black);
+
+    @media screen and (min-width: $desktop) {
+      @include text(1.25em, 24px, 300, $black);
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+    margin-top: 60px;
+    @include flex(flex-start, inherit, column);
+    row-gap: 24px;
+
+    @media screen and (min-width: $desktop) {
+      @include flex(space-between, center, row-reverse);
+      margin-top: 141.5px;
+    }
+
+    @media screen and (min-width: $desktop-bigger) {
+      margin-top: 200px;
+    }
+  }
+
+  &-social {
+    @include flex(center, center, row);
+    column-gap: 47px;
+  }
+}
+.login {
+  padding: 80px 20px;
+  background-color: $black;
+  @media screen and (min-width: $desktop) {
+    min-width: 505px;
+    max-width: 505px;
+    padding: 80px 60px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 45px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $white;
+    color: $white;
+  }
+
+  &__input::placeholder {
+    @include text(0.875em, 17px, 400, $white);
+  }
+
+  &__button {
+    display: block;
+    margin-left: auto;
+    padding: 16px 40px;
+    @include text(0.875em, 17px, 300, $black);
+
+    &:active {
+      background-color: $black;
+      color: $white;
+    }
+  }
+}

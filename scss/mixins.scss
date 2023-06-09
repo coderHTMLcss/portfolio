@@ -19,3 +19,16 @@
 
   flex-direction: $direction;
 }
+
+@mixin pseudoElement($position: static, $side: after, $content: "") {
+  @if ($position == absolute) {
+    position: relative;
+  }
+
+  &::#{$side} {
+    content: $content;
+    position: $position;
+
+    @content;
+  }
+}
